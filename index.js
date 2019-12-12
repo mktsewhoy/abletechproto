@@ -1,12 +1,17 @@
+// The easy way:
 for (c = 1; c < 101; c++) {
     if (c % 15 == 0) {
-        document.write("FizzBuzz");
+        console.log("FizzBuzz")
     } else if (c % 3 == 0) {
-        document.write("Fizz");
+        console.log("Fizz")
     } else if (c % 5 == 0) {
-        document.write("Buzz");
+        console.log("Buzz")
     } else {
-        document.write(c);
+        console.log(c)
     }
-    document.write("<br>")
+}
+
+// The refactored way:
+for (c = 0; c < 100;) {
+    console.log((++c % 3 ? '':'fizz')+(c % 5 ?'':'buzz') || c)
 }
